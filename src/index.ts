@@ -1,3 +1,5 @@
+// @ts-ignore
+import { PropOptions, Nullable } from './props';
 import * as PropArray from './props/array';
 import * as PropBoolean from './props/boolean';
 import * as PropDate from './props/date';
