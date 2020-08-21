@@ -1,0 +1,28 @@
+{
+  "name": "vue-shorthand-props",
+  "version": "1.0.0",
+  "description": "Vue.js shorthand props.",
+  "author": "dosadczuk",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test",
+    "version": "git add -A src"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7",
+    "@types/jest": "^26.0.9",
+    "jest": "^26.4.0",
+    "ts-jest": "^26.2.0"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "lib": [
+      "ESNext"
+    ],
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "allowJs": false,
+    "strict": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "exclude": [
+    "node_modules",
+    "tests",
+    "dist"
+  ]
+}
