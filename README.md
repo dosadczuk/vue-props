@@ -91,6 +91,7 @@ Yes, you can. Every type has the same pair of functions: _RequiredType_, _Defaul
 * String: `RequiredString()` and `DefaultString()`. Default value is _empty string_.
 * Number : `RequiredNumber()` and `DefaultNumber()`. Default value is _0_.
 * Boolean: `RequiredBoolean()` and `DefaultBoolean()`. Default value is _false_.
+* Date: `RequiredDate()` and `DefaultDate()`. Default value is _new Date()_.
 * Array: `RequiredArray()` and `DefaultArray()`. Default value is _empty array_.
 * Object: `RequiredObject()` and `DefaultObject()`. Default value is _empty object_.
 * Function: `RequiredFunction()` and `DefaultFunction(() => true)`. There is no default value. You have to
@@ -109,6 +110,9 @@ props: {
     
     /** Boolean prop with default value. */
     sampleBoolean: DefaultBoolean(true),
+
+    /** Date prop with default value. */
+    sampleDate: DefaultDate(new Date('2020-01-10')),
     
     /** Array prop with default value. */
     sampleArray: DefaultArray([ 1, 2, 3 ]),
@@ -125,22 +129,18 @@ props: {
 Every function is generic and for arrays, object and functions you can go even further.
 
 ```typescript
-// Object example
 interface Person { name: string; };
-
-props: {
-    person: RequiredObject<Person>(),
-}
-
-// Array example
-props: {
-    people: RequiredArray<Person>()
-} 
-
-// Function example
 type Validator = (value: string) => boolean;
 
+
 props: {
+    // Object example
+    person: RequiredObject<Person>(),
+
+    // Array example
+    people: RequiredArray<Person>(),
+
+    // Function example
     validator: DefaultFunction<Validator>((value) => value.length > 0)
 }
 ```
