@@ -1,4 +1,4 @@
-# vue-simple-props
+# vue-props
 
 Main goal is to provide shorthands to create Vue.js props.
 
