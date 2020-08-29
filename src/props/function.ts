@@ -1,4 +1,6 @@
-import { Default, Nullable, PropOptions, Required } from './index';
+import { PropOptions } from '../interfaces';
+import { Nullable } from '../types';
+import { Default, Required } from './index';
 
 /**
  * Prop with required function value.
@@ -8,6 +10,7 @@ import { Default, Nullable, PropOptions, Required } from './index';
  *
  * @since 1.0.0
  */
+// @ts-ignore
 export const RequiredFunction = <T extends Function>(options?: PropOptions<T>) => Required<T>(Function, options);
 
 /**
@@ -19,4 +22,5 @@ export const RequiredFunction = <T extends Function>(options?: PropOptions<T>) =
  *
  * @since 1.0.0
  */
+// @ts-ignore
 export const DefaultFunction = <T extends Function>(value: Nullable<T>, options?: PropOptions<T>) => Default<T>(Function, value, options);

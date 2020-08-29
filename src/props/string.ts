@@ -1,4 +1,6 @@
-import { Default, Nullable, PropOptions, Required } from './index';
+import { PropOptions } from '../interfaces';
+import { Nullable } from '../types';
+import { Default, Required } from './index';
 
 /**
  * Prop with required string value.
